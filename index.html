@@ -19,7 +19,7 @@
     />
 </head>
 
-<body>
+<body onload="detectMobile();">
 
     <style>
         body,
@@ -39,6 +39,21 @@
             text-decoration: none;
         }
     </style>
+
+<script>
+    function detectMobile() {
+var x = document.getElementById('mobileCheck');
+var y = document.getElementById('desktopCheck');
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobi/i.test(navigator.userAgent)) {
+//alert("You are on mobile");
+x.className += ' w3-show';
+} else {
+//alert("You are on desktop");
+y.className += ' w3-show';
+}
+} 
+</script>
 
     <div class="gr-smoke w3-hide-small w3-hide-medium gr-top">
         <ul class="navBarWidth" style="padding: 0px 30px;">
@@ -236,7 +251,7 @@
                 </div>
             </div>
 
-            </div><!--End of mobile view check-->
+            </div> <!--End of mobile view check-->
 
 
 
