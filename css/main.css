@@ -1,0 +1,336 @@
+.w3-charcoal-black,
+.w3-hover-charcoal-black:hover {
+    color:#fff!important;
+    background-color:#232323!important
+}
+
+.w3-text-charcoal-black,
+.w3-hover-text-charcoal-black:hover {
+    color:#232323!important
+}
+
+/*
+Code used for navigation bar
+*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 4px 4px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 20px 12px;
+    border-radius: 4px;
+    background-color:black!important;
+}
+
+li a:hover:not(.active) {
+    background-color:#3d3d3d!important;
+    color:white;
+}
+
+/*
+End of navigation bar code
+*/
+
+.gr-padding {
+    padding: 6px 6px;
+}
+
+/*Sets video as background. Use div to set height of element. Position of video is adjusted with "top" percentage in CSS*/
+#cover-vid-500 { 
+    position: absolute;
+    right: 50%;
+    top: -20%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(50%, 0%);
+    }
+
+    /*Sets video as background. Use div to set height of element. Position of video is adjusted with "top" percentage in CSS*/
+    #cover-vid-800 {
+        position: absolute;
+        right: 50%;
+        top: -0%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        transform: translate(50%, 0%);
+        }
+
+
+.gr-top,
+.gr-bottom {
+    position: absolute;
+    width: 100%;
+    z-index: 1
+  }
+  .gr-top {
+    top: 0
+  }
+  .gr-bottom {
+    bottom: 0
+  }
+
+.gr-smoke,
+.gr-hover-smoke:hover {
+    color:#fff!important;
+    background-color:rgba(0,0,0, .3)!important
+}
+
+.gr-text-smoke,
+.gr-hover-text-smoke:hover {
+    color:rgba(0,0,0, .3)!important
+}
+
+.gr-cloudy,
+.gr-hover-cloudy:hover {
+    color:#000!important;
+    background-color:rgba(255, 255, 255, 0.3)!important
+}
+
+.gr-text-cloudy,
+.gr-hover-text-cloudy:hover {
+    color:rgba(255,255,255, 0.3)!important
+}
+
+.w3-animate-pulse {
+    margin:15px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #cca92c;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: w3-animate-pulse 2s infinite;
+}
+.w3-animate-pulse:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+  @-webkit-keyframes w3-animate-pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+  @keyframes w3-animate-pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .95);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #3CC47C;
+  }
+   
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #fff;
+    padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    padding-right: 0px;
+    padding-left:8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .navBarWidth {
+    max-width: 1650px;
+    margin: auto !important
+}
+
+.bg-project-rayos-designs {
+    background-image: url("https://1.bp.blogspot.com/-I1O2IMEL9_w/Wy7vsW3R0iI/AAAAAAAAL7I/SY_JrPDW5gUrC0P47kd7-kEBQSn9adFLwCLcBGAs/s1600/photo-1501681506726-610246d81ade_home.jpeg");
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-bomb-city-outfitters {
+    background-image: url("https://3.bp.blogspot.com/-4q1-QpYy3Hg/WzWMDe7JG0I/AAAAAAAAMCA/FcCHGng20mAe4xtrH6vUvigfRQFuGFuqwCLcBGAs/s1600/photo-1506703719100-a0f3a48c0f86.jpeg");
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-samantha-rayos {
+    background-image: url("https://1.bp.blogspot.com/-XXhmWDYrWtk/WzWMKawil2I/AAAAAAAAMCE/O_o4Q3wz56QGiMGH21OlBP0ZGxoA0jdZgCLcBGAs/s1600/photo-1498930133386-33ee20e8e71b.jpeg");
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-ceph {
+    background-image: url("https://2.bp.blogspot.com/-ipcc63kxYNI/WzWMuNVzZuI/AAAAAAAAMCQ/wWR8gb1KO9sMf7O-9PGbh-Zs1peMeh7dwCLcBGAs/s1600/1498745353_c84e.jpg");
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-senior-project {
+    background-image: url("https://3.bp.blogspot.com/-oQLNZnKa4h0/WzWM4nY5bmI/AAAAAAAAMCU/5RJ2MqwJQPY-Jr5BWeXx2E7nkNm3LEwTACLcBGAs/s1600/NMSU.jpg");
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-project-future-projects {
+    background-image: url("https://4.bp.blogspot.com/-a7jz0PSbFFI/WzWNKz4BQdI/AAAAAAAAMCg/u2givL9lodo3f2-udCVJqSKNNeySlcCXwCLcBGAs/s1600/photo-1499673610122-01c7122c5dcb.jpeg");
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-500-future-projects {
+    background-image: url("https://4.bp.blogspot.com/-a7jz0PSbFFI/WzWNKz4BQdI/AAAAAAAAMCg/u2givL9lodo3f2-udCVJqSKNNeySlcCXwCLcBGAs/s1600/photo-1499673610122-01c7122c5dcb.jpeg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-800-future-projects {
+    background-image: url("https://4.bp.blogspot.com/-a7jz0PSbFFI/WzWNKz4BQdI/AAAAAAAAMCg/u2givL9lodo3f2-udCVJqSKNNeySlcCXwCLcBGAs/s1600/photo-1499673610122-01c7122c5dcb.jpeg");
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.w3-padding-column {
+    padding: 8px 8px;
+}
+
+.border-white {
+    border: 8px solid white;
+}
+
+.google-maps { 
+    position: relative; 
+    padding-bottom: 70%; /* This is the aspect*/
+    height: 0; 
+    overflow: hidden; 
+    } 
+    .google-maps iframe { 
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100% !important; 
+    height: 100% !important; 
+    }
+
+    .w3-padding-medium {
+        padding: 0px 16px;
+    }
+
+    .roundButton {
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 0px;
+        padding: 10px;
+        display: inline-block;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+    }
+
+    .bg-parallax {
+        /* The image used */
+        background-image: url("https://3.bp.blogspot.com/-7IMBTtTxzcM/Wy7vsFvqlnI/AAAAAAAAL7E/2u6aSHBIWiQscPSXi3G4pScThYtyzJKxQCLcBGAs/s1600/photo-1498118436615-0aa34fee6555_parallax1.jpeg");
+        /* Full height */
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
