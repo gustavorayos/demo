@@ -50,11 +50,11 @@ End of navigation bar code
     padding: 6px 6px;
 }
 
-/*Sets video as background. Use div to set height of element. Position of video is adjusted with "top" percentage in CSS*/
+/*Sets video as background. Use div to set height of element. Position of video is adjusted with "top" percentage in CSS (between 0 and -50%)*/
 #cover-vid-500 { 
     position: absolute;
     right: 50%;
-    top: -20%;
+    top: -5%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -63,11 +63,11 @@ End of navigation bar code
     transform: translate(50%, 0%);
     }
 
-    /*Sets video as background. Use div to set height of element. Position of video is adjusted with "top" percentage in CSS*/
+    /*Sets video as background. Use div to set height of element. Position of video is adjusted with "top" percentage in CSS (between 0 and -50%)*/
     #cover-vid-800 {
         position: absolute;
         right: 50%;
-        top: -0%;
+        top: 0%;
         min-width: 100%;
         min-height: 100%;
         width: auto;
