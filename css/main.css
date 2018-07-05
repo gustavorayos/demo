@@ -273,7 +273,7 @@ End of navigation bar code
 }
 
 .bg-500-future-projects {
-    background-image: url("/Users/gustavorayos/Desktop/Visual Studio Projects/Github Page/videos/Ferry_Tour/Ferry_Tour.jpg");
+    background-image: url("https://raw.githubusercontent.com/gustavorayos/demo/master/videos/Ferry_Tour/Ferry_Tour.jpg");
     height: 600px;
     background-position: center;
     background-repeat: no-repeat;
@@ -281,7 +281,7 @@ End of navigation bar code
 }
 
 .bg-800-future-projects {
-    background-image: url("/Users/gustavorayos/Desktop/Visual Studio Projects/Github Page/videos/Ferry_Tour/Ferry_Tour.jpg");
+    background-image: url("https://raw.githubusercontent.com/gustavorayos/demo/master/videos/Ferry_Tour/Ferry_Tour.jpg");
     height: 800px;
     background-position: center;
     background-repeat: no-repeat;
