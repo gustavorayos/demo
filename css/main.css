@@ -84,10 +84,11 @@ End of navigation bar code
     z-index: 1
   }
   .gr-top {
-    top: 0
+    top: 0;
   }
   .gr-bottom {
-    bottom: 0
+    bottom: 0;
+    right: 0;
   }
 
 .gr-smoke,

@@ -40,6 +40,8 @@
         }
     </style>
 
+    <div id="home"></div>
+
 
     <div class="gr-smoke w3-hide-small w3-hide-medium gr-top">
         <ul class="navBarWidth" style="padding: 0px 30px;">
@@ -64,6 +66,16 @@
                 Rayos Designs
             </li>
         </ul>
+    </div>
+
+
+    <div style='position:fixed;right:40px;bottom:10px;width:45px;z-index: 10;'>
+        <a href="#home">
+            <div class='w3-btn-floating w3-white w3-animate-pulse'>
+                <i class='fas fa-arrow-up' style='position: relative; top: 58%; transform: translateY(-64%); left:10px; font-size: 24px;'>
+                </i>
+            </div>
+        </a>
     </div>
 
 
@@ -108,22 +120,20 @@
 
     <!--Video cover for small screens-->
     <div class="w3-hide" id="desktopSmall">
-            <video playinline autoplay muted loop id="cover-vid-500">
-                <source src="videos/Ferry_Tour/Ferry_Tour.webm" type="video/webm"> Your browser does not support HTML5 video.
-            </video>
-            <div class="w3-display-container" style="height:600px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);">
-                <div class="w3-display-middle gr-smoke w3-center" style="width:100%;margin-top: 42px;">
-                    <h1 style="font-size:70px;font-weight: bold;">
-                        HELLO
-                    </h1>
-                    <p>
-                        <span style="font-size: 30px;">
-                            My name is Gustavo Rayos, nice to meet you.
-                        </span>
-                    </p>
-                </div>
+        <video playinline autoplay muted loop id="cover-vid-500">
+            <source src="videos/Ferry_Tour/Ferry_Tour.webm" type="video/webm"> Your browser does not support HTML5 video.
+        </video>
+        <div class="w3-display-container" style="height:600px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);">
+            <div class="w3-display-middle gr-smoke w3-center" style="width:100%;margin-top: 42px;">
+                <h1 style="font-size:70px;font-weight: bold;">
+                    HELLO
+                </h1>
+                <p style="font-size: 30px;">
+                    My name is Gustavo Rayos, nice to meet you.
+                </p>
             </div>
         </div>
+    </div>
 
 
 
@@ -137,30 +147,24 @@
                 <h1 style="font-size:70px;font-weight: bold;">
                     HELLO
                 </h1>
-                <p>
-                    <span style="font-size: 30px;">
-                        My name is Gustavo Rayos, nice to meet you.
-                    </span>
+                <p style="font-size: 30px;">
+                    My name is Gustavo Rayos, nice to meet you.
                 </p>
             </div>
         </div>
     </div>
 
 
-<!--Static cover for small screens-->
-<div class="w3-hide" id="mobileSmall">
-        <div class='bg-500-future-projects w3-display-container w3-text-white'>
-            <div class='div-bg-shade' style='height:600px;'>
-                <div class='gr-smoke w3-display-middle w3-center' style='width:100%;margin-top:30px;padding:16px;'>
-                    <h1>
-                        <span style='font-family: "Nunito", sans-serif; font-size: 70px; font-weight: bold;'>
-                            HELLO
-                        </span>
+    <!--Static cover for small screens-->
+    <div class="w3-hide" id="mobileSmall">
+        <div class='bg-500-future-projects w3-display-container'>
+            <div class='div-bg-shade'>
+                <div class='w3-display-middle gr-smoke w3-center' style='width:100%;margin-top:30px;padding:16px;'>
+                    <h1 style="font-size:70px;font-weight: bold;">
+                        HELLO
                     </h1>
-                    <p>
-                        <span style='font-family: "Nunito", sans-serif; font-size: 30px;'>
-                                My name is Gustavo Rayos, nice to meet you.
-                        </span>
+                    <p style="font-size: 30px;">
+                        My name is Gustavo Rayos, nice to meet you.
                     </p>
                 </div>
             </div>
@@ -168,25 +172,21 @@
     </div>
 
 
-<!--Static cover for large screens-->
-<div class="w3-hide" id="mobileLarge">
-        <div class='bg-800-future-projects w3-display-container w3-text-white'>
-                <div class='div-bg-shade' style='height:500px;'>
-                    <div class='w3-display-left gr-smoke' style='padding:16px;'>
-                        <h1>
-                            <span style='font-family: "Nunito", sans-serif; font-size: 70px; font-weight: bold;'>
-                                HELLO
-                            </span>
-                        </h1>
-                        <p>
-                            <span style='font-family: "Nunito", sans-serif; font-size: 30px;'>
-                                    My name is Gustavo Rayos, nice to meet you.
-                            </span>
-                        </p>
-                    </div>
+    <!--Static cover for large screens-->
+    <div class="w3-hide" id="mobileLarge">
+        <div class='bg-800-future-projects w3-display-container'>
+            <div class='div-bg-shade'>
+                <div class='w3-display-left gr-smoke' style='padding:16px;'>
+                    <h1 style="font-size:70px;font-weight: bold;">
+                        HELLO
+                    </h1>
+                    <p style="font-size: 30px;">
+                        My name is Gustavo Rayos, nice to meet you.
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
@@ -801,6 +801,32 @@
         sr.reveal('.rs-bottom', {
             duration: 2000,
             origin: 'bottom'
+        });
+        //JQuery used to have smooth scrolling from section to section
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $('a').on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.getAttribute("href").indexOf("/p/") > -1) {
+                    //alert("hi");
+                }
+                else {
+                    if (this.hash !== '') {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+                        // Store hash
+                        var hash = this.hash;
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function () {
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                }
+            });
         });
     </script>
 

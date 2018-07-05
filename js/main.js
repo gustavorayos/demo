@@ -5,6 +5,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
 function detectMobile() {
     var mobileSmall = document.getElementById('mobileSmall');
     var mobileLarge = document.getElementById('mobileLarge');
@@ -18,8 +19,8 @@ function detectMobile() {
         }
         else {
             mobileLarge.className += ' w3-show';
-        }  
-    } 
+        }
+    }
     else {
         //alert("You are on desktop");
         if ($(window).width() <= 992) {
@@ -27,7 +28,7 @@ function detectMobile() {
         }
         else {
             desktopLarge.className += ' w3-show';
-        }  
+        }
     }
 }
 
