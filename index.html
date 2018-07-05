@@ -19,7 +19,7 @@
     />
 </head>
 
-<body onload="detectMobile();">
+<body onload="detectMobile();setTimeout(wait5,5000);">
 
     <style>
         body,
@@ -40,7 +40,7 @@
         }
     </style>
 
-    <div id="home"></div>
+    <div id="home">
 
 
     <div class="gr-smoke w3-hide-small w3-hide-medium gr-top">
@@ -805,6 +805,8 @@
     </div>
     <!--End of footer-->
 
+</div>
+
     <script>
         window.sr = ScrollReveal();
         sr.reveal('.rs-top', {
@@ -816,6 +818,13 @@
             duration: 2000,
             origin: 'bottom'
         });
+
+                sr.reveal('.rs-delay', {
+            duration: 2000,
+            origin: 'bottom',
+            delay: 3000,
+        });
+
         //JQuery used to have smooth scrolling from section to section
         $(document).ready(function () {
             // Add smooth scrolling to all links
@@ -843,6 +852,13 @@
             });
         });
     </script>
+    <script>
+    document.body.className += ' fade-out';
+    $(setTimeout(function() {
+    $('body').removeClass('fade-out');
+},1000)
+);
+</script>
 
 </body>
 

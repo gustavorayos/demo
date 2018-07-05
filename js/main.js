@@ -32,3 +32,6 @@ function detectMobile() {
     }
 }
 
+function wait5 () {
+    $("#fadeDiv").fadeIn();
+}
