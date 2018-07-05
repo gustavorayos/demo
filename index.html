@@ -40,20 +40,6 @@
         }
     </style>
 
-<script>
-    function detectMobile() {
-var x = document.getElementById('mobileCheck');
-var y = document.getElementById('desktopCheck');
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobi/i.test(navigator.userAgent)) {
-//alert("You are on mobile");
-x.className += ' w3-show';
-} else {
-//alert("You are on desktop");
-y.className += ' w3-show';
-}
-} 
-</script>
 
     <div class="gr-smoke w3-hide-small w3-hide-medium gr-top">
         <ul class="navBarWidth" style="padding: 0px 30px;">
@@ -120,9 +106,29 @@ y.className += ' w3-show';
     </div>
 
 
-    <div class="w3-hide " id="desktopCheck">
+    <!--Video cover for small screens-->
+    <div class="w3-hide" id="desktopSmall">
+            <video playinline autoplay muted loop id="cover-vid-500">
+                <source src="videos/Ferry_Tour/Ferry_Tour.webm" type="video/webm"> Your browser does not support HTML5 video.
+            </video>
+            <div class="w3-display-container" style="height:600px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);">
+                <div class="w3-display-middle gr-smoke w3-center" style="width:100%;margin-top: 42px;">
+                    <h1 style="font-size:70px;font-weight: bold;">
+                        HELLO
+                    </h1>
+                    <p>
+                        <span style="font-size: 30px;">
+                            My name is Gustavo Rayos, nice to meet you.
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
     <!--Video cover for large screens-->
-    <div class="w3-hide-small">
+    <div class="w3-hide" id="desktopLarge">
         <video autoplay muted loop id="cover-vid-800">
             <source src="videos/Ferry_Tour/Ferry_Tour.webm" type="video/webm"> Your browser does not support HTML5 video.
         </video>
@@ -141,91 +147,30 @@ y.className += ' w3-show';
     </div>
 
 
-
-    <!--Video cover for small screens-->
-  <div class="w3-hide-medium w3-hide-large">
-        <video playinline autoplay muted loop id="cover-vid-500">
-            <source src="videos/Ferry_Tour/Ferry_Tour.webm" type="video/webm"> Your browser does not support HTML5 video.
-        </video>
-        <div class="w3-display-container" style="height:600px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);">
-            <div class="w3-display-middle gr-smoke w3-center" style="width:100%;margin-top: 42px;">
-                <h1 style="font-size:70px;font-weight: bold;">
-                    HELLO
-                </h1>
-                <p>
-                    <span style="font-size: 30px;">
-                        My name is Gustavo Rayos, nice to meet you.
-                    </span>
-                </p>
+<!--Static cover for small screens-->
+<div class="w3-hide" id="mobileSmall">
+        <div class='bg-500-future-projects w3-display-container w3-text-white'>
+            <div class='div-bg-shade' style='height:500px;'>
+                <div class='div-bg-black w3-display-middle w3-center w3-padding-medium' style='width:90%;margin-top:30px;border: 8px solid white;'>
+                    <h1>
+                        <span style='font-family: "Nunito", sans-serif; font-size: 50px; font-weight: bold;'>
+                            HELLO
+                        </span>
+                    </h1>
+                    <p>
+                        <span style='font-family: "Nunito", sans-serif; font-size: 20px;'>
+                            I'm Gustavo Rayos, a Website Designer.
+                        </span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    </div> <!--End of desktop view check-->
 
 
-
-
-<div class="w3-hide " id="mobileCheck">
-            <!--Header for large screens-->
-            <div class='w3-hide-small w3-hide-medium bg-800-home w3-display-container w3-text-white'>
-                <div class='div-bg-shade' style='height:800px;'>
-                    <div class='div-bg-black w3-display-middle w3-center w3-padding-medium' style='border: 8px solid white;'>
-                        <h1>
-                            <span style='font-family: "Nunito", sans-serif; font-size: 70px; font-weight: bold;'>
-                                HELLO
-                            </span>
-                        </h1>
-                        <p>
-                            <span style='font-family: "Nunito", sans-serif; font-size: 25px;'>
-                                I'm Gustavo Rayos, a Website Designer.
-                            </span>
-                        </p>
-                        <div style='padding-bottom:16px;'>
-                            <a class='roundButton w3-hover-green' href='/p/portfolio.html'>
-                                Portfolio
-                            </a>
-                            <a class='roundButton w3-hover-green' href='/p/resume.html'>
-                                Resume
-                            </a>
-                            <a class='roundButton w3-hover-green' href='/p/contact.html'>
-                                Contact
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-    
-    
-            <!--Header for medium screens-->
-            <div class='w3-hide-small w3-hide-large bg-500-home w3-display-container w3-text-white'>
-                <div class='div-bg-shade' style='height:500px;'>
-                    <div class='div-bg-black w3-display-middle w3-center w3-padding-medium' style='margin-top:30px;border: 8px solid white;'>
-                        <h1>
-                            <span style='font-family: "Nunito", sans-serif; font-size: 50px; font-weight: bold;'>
-                                HELLO
-                            </span>
-                        </h1>
-                        <p>
-                            <span style='font-family: "Nunito", sans-serif; font-size: 20px;'>
-                                I'm Gustavo Rayos, a Website Designer.
-                            </span>
-                        </p>
-                        <div style='padding-bottom:16px;'>
-                            <a class='roundButton w3-hover-green' href='/p/portfolio.html' style='width:100%;'>
-                                Portfolio
-                            </a>
-                            <div style='padding:4px;' />
-                            <a class='roundButton w3-hover-green' href='/p/resume.html' style='width:100%;'>
-                                Resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <!--Header for small screens-->
-            <div class='w3-hide-medium w3-hide-large bg-500-home w3-display-container w3-text-white'>
+<!--Static cover for large screens-->
+<div class="w3-hide" id="mobileLarge">
+        <div class='bg-800-future-projects w3-display-container w3-text-white'>
                 <div class='div-bg-shade' style='height:500px;'>
                     <div class='div-bg-black w3-display-middle w3-center w3-padding-medium' style='width:90%;margin-top:30px;border: 8px solid white;'>
                         <h1>
@@ -238,20 +183,10 @@ y.className += ' w3-show';
                                 I'm Gustavo Rayos, a Website Designer.
                             </span>
                         </p>
-                        <div style='padding-bottom:16px;'>
-                            <a class='roundButton w3-hover-green' href='/p/portfolio.html' style='width:100%;'>
-                                Portfolio
-                            </a>
-                            <div style='padding:4px;' />
-                            <a class='roundButton w3-hover-green' href='/p/resume.html' style='width:100%;'>
-                                Resume
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
-
-            </div> <!--End of mobile view check-->
+        </div>
 
 
 

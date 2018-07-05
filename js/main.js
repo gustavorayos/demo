@@ -5,17 +5,29 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
-
 function detectMobile() {
-    var x = document.getElementById('mobileCheck');
-    var y = document.getElementById('desktopCheck');
+    var mobileSmall = document.getElementById('mobileSmall');
+    var mobileLarge = document.getElementById('mobileLarge');
+    var desktopSmall = document.getElementById('desktopSmall');
+    var desktopLarge = document.getElementById('desktopLarge');
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobi/i.test(navigator.userAgent)) {
         //alert("You are on mobile");
-        x.className += ' w3-show';
-    } else {
+        if (screen.width <= 992) {
+            mobileSmall.className += ' w3-show';
+        }
+        else {
+            mobileLarge.className += ' w3-show';
+        }  
+    } 
+    else {
         //alert("You are on desktop");
-        y.className += ' w3-show';
+        if ($(window).width() <= 992) {
+            desktopSmall.className += ' w3-show';
+        }
+        else {
+            desktopLarge.className += ' w3-show';
+        }  
     }
 }
+
